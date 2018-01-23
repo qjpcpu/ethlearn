@@ -1,2 +1,17 @@
-* 节点0(主节点)
+*  节点0(主节点)
+
 geth --datadir data0 init genesis.json
+
+# 查看节点id
+admin.nodeInfo.enode
+"enode://39b2c68747c02e357f5b0b2ecf1d3a4f51f89e57f7740a7f9c6eb2ca5e98b48121239ba49838821e11445c8e4b95f07de23957c80aa11550699e509ae754e25a@[::]:30303"
+
+miner.start(1)
+miner.stop()
+
+* 节点1
+
+geth --datadir data1 init genesis.json
+
+#连接到节点0
+admin.addPeer("enode://39b2c68747c02e357f5b0b2ecf1d3a4f51f89e57f7740a7f9c6eb2ca5e98b48121239ba49838821e11445c8e4b95f07de23957c80aa11550699e509ae754e25a@45.32.67.243:30303")
