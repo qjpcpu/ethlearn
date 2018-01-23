@@ -1,0 +1,2 @@
+* 节点0(主节点)
+geth --datadir data0 init genesis.json
